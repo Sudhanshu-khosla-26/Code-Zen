@@ -12,14 +12,14 @@ const About = () => {
                     <span className="">
                         Step into the world of innovation and strategy
                         <br /> with
-                        <span className='font-extrabold'>
+                        <span className='font-extrabold mx-2'>
                             CodeZen
                         </span>
                         , a thrilling 36-hour hackathon <br /> inspired by the electrifying theme of Squid Game!
                         <br />
                         <br />
                         Organized by
-                        <span>
+                        <span className='font-extrabold mx-2'>
                             {("Code</>Geeks")}
                         </span>
                         , the premier coding <br /> society of Guru Tegh Bahadur 4th Centenary <br /> Engineering College, this unique hackathon will <br /> take place on 28th February and 1st March 2025.

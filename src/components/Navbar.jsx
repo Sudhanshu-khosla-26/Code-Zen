@@ -35,7 +35,7 @@ const Navbar = () => {
           </a>
         </div>
         <ul className="flex gap-x-6 text-[#F44878] font-medium leading-[31px] ">
-          {['home', 'about', 'tracks', 'sponsors', 'prizes', 'front Men', 'FAQs'].map((link) => (
+          {['home', 'about', 'tracks', 'sponsors', 'prizes', 'frontmen', 'FAQs'].map((link) => (
             <li key={link} className={`min-w-[60px] relative `}>
               <a
                 href={`#${link}`}
