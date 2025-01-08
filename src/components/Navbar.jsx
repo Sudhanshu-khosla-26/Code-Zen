@@ -28,14 +28,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`flex top-1 fixed z-[2] w-screen rounded-full border-[4px]  ${scrolled ? "bg-[#110202] border-white border-[4px]" : "border-transparent"} justify-between items-center  py-[10px] pl-10 pr-14`}>
+      <nav className={`flex left-[14px] top-[25px] fixed z-[2] w-[98vw] rounded-full border-[4px]  ${scrolled ? "bg-[#110202] border-white border-[4px]" : "border-transparent"} justify-between items-center  py-[10px] pl-10 pr-14`}>
         <div>
           <a href='/'>
             <img src="/images/title.svg" alt="Logo" className="h-[44px] w-[198px]" />
           </a>
         </div>
         <ul className="flex gap-x-6 text-[#F44878] font-medium leading-[31px] ">
-          {['home', 'about', 'tracks', 'sponsors', 'prizes', 'frontmen', 'faqs'].map((link) => (
+          {['home', 'about', 'tracks', 'sponsors', 'prizes', 'front Men', 'FAQs'].map((link) => (
             <li key={link} className={`min-w-[60px] relative `}>
               <a
                 href={`#${link}`}
