@@ -8,6 +8,7 @@ import Prizes from './components/Priczes';
 import Sponsors from './components/Sponsors';
 import Track from './components/Track'
 import Faqs from './components/Faqs'
+import { Analytics } from '@vercel/analytics/react';
 import Footer from './components/Footer';
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           {/* <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div> */}
         </div>
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 }
