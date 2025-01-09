@@ -30,7 +30,7 @@ const Navbar = () => {
     <>
       <nav className={`flex left-[14px] top-[25px] fixed z-[2] w-[98vw] rounded-full border-[4px]  ${scrolled ? "bg-[#110202] border-white border-[4px]" : "border-transparent"} justify-between items-center  py-[10px] pl-10 pr-14`}>
         <div>
-          <a href='/'>
+          <a href='#'>
             <img src="/images/title.svg" alt="Logo" className="h-[44px] w-[198px]" />
           </a>
         </div>

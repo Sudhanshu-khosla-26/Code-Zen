@@ -1,3 +1,4 @@
+import { SectionWrapper } from '../hoc';
 
 const Sponsors = () => {
     return (
@@ -14,4 +15,5 @@ const Sponsors = () => {
     )
 }
 
-export default Sponsors
+const WrappedSponsors = SectionWrapper(Sponsors, "sponsors")
+export default WrappedSponsors;

@@ -1,5 +1,7 @@
 import { Tilt } from 'react-tilt';
 import '../App.css'
+import { SectionWrapper } from '../hoc';
+
 const HomePage = () => {
     const defaultOptions = {
         reverse: true, // reverse the tilt direction
@@ -44,4 +46,5 @@ const HomePage = () => {
     );
 }
 
-export default HomePage
+const WrappedHomePage = SectionWrapper(HomePage, "home");
+export default WrappedHomePage;

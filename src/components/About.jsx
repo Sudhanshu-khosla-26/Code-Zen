@@ -1,6 +1,8 @@
-import React from 'react'
 import DigitalClock from './Clock'
+import { SectionWrapper } from '../hoc';
+
 const About = () => {
+
     return (
         <div className="bg-[url('/images/About.svg')]  h-[120vh]  w-screen  bg-cover bg-center bg-no-repeat m-0 px-0 py-8">
             <div className="records flex items-center justify-center h-[161px] mt-[17vh] mx-auto w-[92vw]">
@@ -34,4 +36,5 @@ const About = () => {
     )
 }
 
-export default About
+const WrappedAbout = SectionWrapper(About, "about");
+export default WrappedAbout;

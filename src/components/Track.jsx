@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { SectionWrapper } from '../hoc';
 
 const Card = ({ title, image, content }) => {
     return (
@@ -94,4 +95,5 @@ const Track = () => {
     )
 }
 
-export default Track;
+const WrappedTrack = SectionWrapper(Track, "tracks")
+export default WrappedTrack
