@@ -7,7 +7,7 @@ const DigitalClock = () => {
         seconds: '00',
     });
     useEffect(() => {
-        const targetDate = new Date('January 10, 2025 00:00:00');
+        const targetDate = new Date('February  28, 2025 00:00:00');
 
         const updateClock = () => {
             const now = new Date();
