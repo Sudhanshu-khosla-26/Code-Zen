@@ -1,13 +1,17 @@
 import { SectionWrapper } from '../hoc';
 import "../App.css";
 import styled from "styled-components";
+import { motion } from 'framer-motion';
+import { slideIn } from '../utils/motion';
+
 
 
 const Frontmen = () => {
     return (
         <div className="bg-[url('/images/Frontmen.svg')]  h-[120vh]  w-screen   bg-cover bg-center bg-no-repeat m-0 px-0 py-8 ">
             <div className="flex flex-col w-[100vw] gap-8 flex-wrap  items-center justify-center mt-[100px] ">
-                <div className="flex flex-row justify-center items-center gap-14 ">
+                <motion.div
+                    variants={slideIn("left", "tween", 0.2, 1)} className="flex flex-row justify-center items-center gap-14 ">
                     <CARD>
                         <div className="front absolute w-full h-full bg-[#FFFFFF]">
                             <img src="/images/SQUARE.svg" alt="" className="relative z-[2] top-[6vh] left-[1.5vw]" />
@@ -54,8 +58,9 @@ const Frontmen = () => {
                             </div>
                         </div>
                     </CARD>
-                </div>
-                <div className="flex flex-row justify-center items-center gap-14">
+                </motion.div>
+                <motion.div
+                    variants={slideIn("right", "tween", 0.2, 1)} className="flex flex-row justify-center items-center gap-14">
                     <CARD>
                         <div className="front absolute w-full h-full bg-[#FFFFFF]">
                             <img src="/images/SQUARE.svg" alt="" className="relative z-[2] top-[6vh] left-[1.5vw]" />
@@ -125,7 +130,7 @@ const Frontmen = () => {
                             </div>
                         </div>
                     </CARD>
-                </div>
+                </motion.div>
             </div>
         </div >
     )

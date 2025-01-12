@@ -1,4 +1,7 @@
 import { SectionWrapper } from '../hoc';
+import { motion } from 'framer-motion';
+import { slideIn } from '../utils/motion';
+
 
 const Prizes = () => {
     return (
@@ -10,28 +13,32 @@ const Prizes = () => {
                     <img src="/images/₹20000.svg" alt="" className="relative z-[10] bottom-[34vh]" />
                 </div>
                 <div className="relative bottom-[42vh] w-[100vw] runnerups flex flex-row justify-between items-center ">
-                    <div className="fristrunner flex flex-col items-center justify-center">
+                    <motion.div
+                        variants={slideIn("left", "tween", 0.2, 1)} className="fristrunner flex flex-col items-center justify-center">
                         <img src="/images/FirstRunnerUp.svg" alt="" className="relative z-[2]" />
                         <img src="/images/Ellipse1.svg" alt="" className="relative z-[5] bottom-[14vh]" />
                         <img src="/images/₹10000.svg" alt="" className="relative z-[10] bottom-[29vh]" />
-                    </div>
-                    <div className="secondrunner flex flex-col items-center justify-center">
+                    </motion.div>
+                    <motion.div
+                        variants={slideIn("right", "tween", 0.2, 1)} className="secondrunner flex flex-col items-center justify-center">
                         <img src="/images/SecondRunnerUp.svg" alt="" className="relative z-[2]" />
                         <img src="/images/Ellipse2.svg" alt="" className="relative z-[5] bottom-[14vh]" />
                         <img src="/images/₹5000R.svg" alt="" className="relative z-[10] bottom-[29vh]" />
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="newandgirlsteam relative bottom-[60vh] w-[80vw] flex flex-row justify-between items-center">
-                    <div className="girls flex flex-col items-center justify-center">
+                    <motion.div
+                        variants={slideIn("left", "tween", 0.2, 1)} className="girls flex flex-col items-center justify-center">
                         <img src="/images/Allgirlsteam.svg" alt="" className="relative z-[2]" />
                         <img src="/images/Ellipse3.svg" alt="" className="relative z-[5] bottom-[10vh]" />
                         <img src="/images/₹5000.svg" alt="" className="relative z-[10] bottom-[23.4vh]" />
-                    </div>
-                    <div className="beginners flex flex-col items-center justify-center">
+                    </motion.div>
+                    <motion.div
+                        variants={slideIn("right", "tween", 0.2, 1)} className="beginners flex flex-col items-center justify-center">
                         <img src="/images/Allbeginnersteam.svg" alt="" className="relative z-[2]" />
                         <img src="/images/Ellipse5.svg" alt="" className="relative z-[5] bottom-[11vh]" />
                         <img src="/images/₹5000.svg" alt="" className="relative z-[10] bottom-[25vh]" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div >

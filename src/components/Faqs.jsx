@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { SectionWrapper } from '../hoc';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
 
 const Faqs = () => {
     const [visibleIndex, setVisibleIndex] = useState(null);
@@ -50,24 +52,24 @@ const Faqs = () => {
 
                 <div className="flex flex-row flex-wrap justify-center items-center mt-4 gap-x-20 h-fit w-full px-8">
                     {faqs.map((faq, index) => (
-                        <div
+                        <motion.div
+                            variants={fadeIn("right", "spring", index * 0.5, 0.75)}
                             key={index}
                             className="relative max-w-fit max-h-fit rounded-lg shadow-md mt-10 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105"
                             onClick={() => toggleAnswer(index)}
                         >
-                            <div className="relative rounded-tr-[16px] rounded-tl-[16px] right-[1.2vw] w-[572px] h-[82px] bg-white z-10 flex items-center justify-start">
+                            <div className="relative rounded-tr-[16px] rounded-tl-[16px] rounded-br-[16px] right-[1.2vw] w-[572px] h-[82px] bg-white z-10 flex items-center justify-start">
                                 <img src="/images/doll.svg" alt="Question Mark" className="relative bottom-[2vh]" />
                                 <h3 className="text-lg font-semibold ml-4 mt-[2vh]">{faq.question}</h3>
                             </div>
                             <div
-                                className={`relative z-0 rounded-br-[16px] rounded-bl-[16px] bg-white right-[1.2vw] bg-opacity-60 flex justify-end items-end w-[572px] transition-all duration-300 ease-in-out ${visibleIndex === index ? 'max-h-[128px] opacity-100' : 'max-h-0 opacity-0'
-                                    }`}
+                                className={`relative z-[2] bottom-[12px] rounded-br-[16px] rounded-bl-[16px] bg-[#D9D9D9] right-[1.2vw] bg-opacity-60 flex justify-end items-end w-[572px] transition-all duration-300 ease-in-out ${visibleIndex === index ? 'max-h-[128px] opacity-100' : 'max-h-0 opacity-0'}`}
                             >
-                                <span className="rounded-br-[16px] pt-1 rounded-bl-[16px] pl-4 z-[2] w-[572px] bg-[#D9D9D9] bg-opacity-60 ">
+                                <span className="rounded-br-[16px] relative pt-4 rounded-bl-[16px] pl-4 z-[2] w-[572px]  bg-opacity-60 ">
                                     {faq.answer}
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
