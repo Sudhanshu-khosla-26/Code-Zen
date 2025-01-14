@@ -28,3 +28,4 @@ body::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+/* Hide scrollbar for all browsers */

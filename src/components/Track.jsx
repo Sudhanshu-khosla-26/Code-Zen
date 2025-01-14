@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { SectionWrapper } from '../hoc';
+
 
 const Card = ({ title, image, content, size, Tsize }) => {
     return (
@@ -84,6 +85,29 @@ const Track = () => {
         },
     ]
 
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
+        }, 1150);
+
+        return () => clearInterval(intervalRef.current);
+    }, []);
+
+    const intervalRef = useRef(null);
+
+    const handleMouseEnter = () => {
+        clearInterval(intervalRef.current);
+    };
+
+    const handleMouseLeave = () => {
+        intervalRef.current = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
+        }, 3000);
+    };
+
+
+
+
     return (
         <>
             <div className="bg-[url('/images/trackbg.svg')] h-[120vh] w-screen bg-cover bg-center bg-no-repeat m-0 px-0 py-8">
@@ -101,7 +125,7 @@ const Track = () => {
                             <Card title={Data[(currentIndex - 1 + Data.length) % Data.length].title} image={Data[(currentIndex - 1 + Data.length) % Data.length].image} Tsize={Data[(currentIndex - 1 + Data.length) % Data.length].Tsize} content={Data[(currentIndex - 1 + Data.length) % Data.length].content} size={Data[(currentIndex - 1 + Data.length) % Data.length].size} />
                         </div>
                     </button>
-                    <div
+                    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
                         className="transition-transform duration-500 transform hover:scale-105"
                         style={{ display: 'block' }}
                     >

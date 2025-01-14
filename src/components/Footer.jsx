@@ -3,10 +3,10 @@ import { SectionWrapper } from "../hoc";
 const Footer = () => {
     return (
         <>
-            <div className="flex items-center bg-[#110202] justify-center h-[120vh] gap-16 w-screen  m-0 px-0 py-0">
+            <div className="flex overflow-hidden items-center bg-[#110202] justify-center h-[120vh] gap-16 w-screen  m-0 px-0 py-0">
                 <div className="left max-h-full w-[50vw] flex flex-col">
-                    <img className="relative left-4 top-[18vh] scale-x-[2] scale-y-[2.6]" src="/images/footermainimg.svg" alt="" />
-                    <span className="relative top-[24vh] left-[3vw] font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >
+                    <img className="relative left-4 top-[16vh] scale-x-[2] scale-y-[2.3]" src="/images/footermainimg.svg" alt="" />
+                    <span className="relative top-[21vh] left-[3vw] font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >
                         All Rights Reserved. <br />
                         © CodeGeeks 2025
                     </span>
@@ -31,7 +31,8 @@ const Footer = () => {
                         <span className="relative top-[8vh]  font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >
                             Contact us at: <br />
                             business.codegeeks@gmail.com <br />
-                            +91 96255 43638
+                            +91 96255 43638 <br />
+                            +91 82794 37447
                         </span>
                         <span className="relative top-[8vh] flex items-center gap-2 font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >
                             Follow Us On:
