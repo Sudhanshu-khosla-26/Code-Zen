@@ -50,10 +50,10 @@ const Faqs = () => {
             <div className="flex flex-col items-center justify-center mt-[90px]">
                 <img src="/images/FAQTITLE.svg" alt="" />
 
-                <div className="flex flex-row flex-wrap justify-center items-center mt-4 gap-x-20 h-fit w-full px-8">
+                <motion.div
+                    variants={fadeIn("", "", 0.1, 1)} className="flex flex-row flex-wrap justify-center items-center mt-4 gap-x-20 h-fit w-full px-8">
                     {faqs.map((faq, index) => (
-                        <motion.div
-                            variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+                        <div
                             key={index}
                             className="relative max-w-fit max-h-fit rounded-lg shadow-md mt-10 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105"
                             onClick={() => toggleAnswer(index)}
@@ -69,9 +69,9 @@ const Faqs = () => {
                                     {faq.answer}
                                 </span>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

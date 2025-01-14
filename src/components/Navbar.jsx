@@ -39,7 +39,7 @@ const Navbar = () => {
             <li key={link} className={`min-w-[60px] relative `}>
               <a
                 href={`#${link}`}
-                className={`text-[21.5px] relative z-10 ${activeLink === `#${link}` ? 'text-white font-bold' : ''}`}
+                className={`text-[21.5px] hover:text-white relative z-10 ${activeLink === `#${link}` ? 'text-white font-bold' : ''}`}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
               </a>

@@ -50,10 +50,10 @@ const About = () => {
                 <span className="w-[634px] font-[Poppins] font-medium text-[25px] leading-[31.45px] text-white  text-start mr-24">
                     <motion.div variants={textVariant()}>
                         <img className='mb-4' src="/images/Abouttitle.svg" alt="" />
-                        <span className="">
+                        <span className="font-[Poppins]">
                             Step into the world of innovation and strategy
                             <br /> with
-                            <span className='font-extrabold mx-2'>
+                            <span className='font-[Poppins] font-extrabold mx-2'>
                                 CodeZen
                             </span>
                             , a thrilling 36-hour hackathon <br /> inspired by the electrifying theme of Squid Game!
