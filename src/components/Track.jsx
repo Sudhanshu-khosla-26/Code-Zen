@@ -88,7 +88,7 @@ const Track = () => {
     useEffect(() => {
         intervalRef.current = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
-        }, 1150);
+        }, 1400);
 
         return () => clearInterval(intervalRef.current);
     }, []);
@@ -102,7 +102,7 @@ const Track = () => {
     const handleMouseLeave = () => {
         intervalRef.current = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % Data.length);
-        }, 3000);
+        }, 2000);
     };
 
 
@@ -119,6 +119,7 @@ const Track = () => {
                 <div className="flex h-[52vh]  flex-row justify-center items-center gap-10 mt-2 overflow-x-hidden  mb-16">
                     <button onClick={handlePrev} className="opacity-50">
                         <div
+                            onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
                             className="transition-transform duration-500 transform hover:scale-105"
                             style={{ display: 'block' }}
                         >
@@ -132,7 +133,7 @@ const Track = () => {
                         <Card title={Data[currentIndex].title} image={Data[currentIndex].image} Tsize={Data[currentIndex].Tsize} content={Data[currentIndex].content} size={Data[currentIndex].size} />
                     </div>
                     <button onClick={handleNext} className="opacity-50">
-                        <div
+                        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
                             className="transition-transform duration-500 transform hover:scale-105"
                             style={{ display: 'block' }}
                         >

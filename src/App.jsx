@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 /* import About from './components/About'
 import Frontmen from './components/Frontmen';
 import HomePage from './components/HomePage'
@@ -10,7 +10,7 @@ import Track from './components/Track'
 import Faqs from './components/Faqs' */
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/Footer";
-import SvgAnimation from "./components/SquidAnim";
+// import SvgAnimation from "./components/SquidAnim";
 import Audio from "./components/Audio";
 import { useState, useEffect, Suspense, lazy } from "react";
 import Loader from "./components/Loader";
@@ -58,55 +58,55 @@ function App() {
           </div>
         )}
         {animationCompleted && (
-        <Suspense
-          fallback={
-            <div className="z-40 flex flex-col fixed gap-5 items-center justify-center bg-black h-screen w-screen px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-              <div>
-                <Loader />
-              </div>
-              <div className="w-32 max-w-full">
-                <div className="h-0.5 w-full bg-pink-100 overflow-hidden">
-                  <div className="progress w-full h-full bg-pink-500 left-right"></div>
+          <Suspense
+            fallback={
+              <div className="z-40 flex flex-col fixed gap-5 items-center justify-center bg-black h-screen w-screen px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+                <div>
+                  <Loader />
+                </div>
+                <div className="w-32 max-w-full">
+                  <div className="h-0.5 w-full bg-pink-100 overflow-hidden">
+                    <div className="progress w-full h-full bg-pink-500 left-right"></div>
+                  </div>
                 </div>
               </div>
+            }
+          >
+            <div className="relative landAnim">
+              <HomePage />
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
             </div>
-          }
-        >
-          <div className="relative landAnim">
-            <HomePage />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <About />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <Track />
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <Sponsors />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <Prizes />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <Frontmen />
-            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-          <div className="relative">
-            <Faqs />
-            <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#110202] to-transparent pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-          </div>
-        </Suspense>
+            <div className="relative">
+              <About />
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <Track />
+              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <Sponsors />
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <Prizes />
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <Frontmen />
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative">
+              <Faqs />
+              <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#110202] to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+          </Suspense>
         )
         }
         <div className="relative">

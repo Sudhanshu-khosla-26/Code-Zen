@@ -36,13 +36,13 @@ const Footer = () => {
                         </span>
                         <span className="relative top-[8vh] flex items-center gap-2 font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >
                             Follow Us On:
-                            <a className="cursor-pointer">
+                            <a href="https://www.instagram.com/codegeeks_gtb4cec" target="_blanket" className="cursor-pointer">
                                 <img src="/images/footerinsta.svg" alt="" />
                             </a>
-                            <a className="cursor-pointer">
+                            <a href="https://www.linkedin.com/company/codegeeks-gtb4cec/posts/?feedView=all" target="_blanket" className="cursor-pointer">
                                 <img src="/images/footerlinkedin.svg" alt="" />
                             </a>
-                            <a className="cursor-pointer">
+                            <a href="https://discord.com/invite/pE9AwXWwPW" target="_blanket" className="cursor-pointer">
                                 <img src="/images/Discord.svg" alt="" />
                             </a>
                         </span>

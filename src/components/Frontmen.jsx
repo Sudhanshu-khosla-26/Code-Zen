@@ -26,10 +26,10 @@ const Frontmen = () => {
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Lead Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.instagram.com/its_atharv_tripathi' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/INSTA.svg" alt="" className="" />
                                     </a>
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.linkedin.com/in/atharv7740' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/LINKEDIN.svg" alt="" className="" />
                                     </a>
                                 </div>
@@ -50,10 +50,10 @@ const Frontmen = () => {
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Lead Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.instagram.com/arpitrajput.exe' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/INSTA.svg" alt="" className="" />
                                     </a>
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.linkedin.com/in/arpit-rajput-831393213' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/LINKEDIN.svg" alt="" className="" />
                                     </a>
                                 </div>
@@ -77,10 +77,10 @@ const Frontmen = () => {
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Co-Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.instagram.com/imskumarj/' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/INSTA.svg" alt="" className="" />
                                     </a>
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.linkedin.com/in/imskumarj/' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/LINKEDIN.svg" alt="" className="" />
                                     </a>
                                 </div>
@@ -101,10 +101,10 @@ const Frontmen = () => {
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Co-Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.instagram.com/kiyraaaaa_/' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/INSTA.svg" alt="" className="" />
                                     </a>
-                                    <a className='cursor-pointer'>
+                                    <a href='https://www.linkedin.com/in/kashvi15/' target='_blanket' className='cursor-pointer'>
                                         <img src="/images/LINKEDIN.svg" alt="" className="" />
                                     </a>
                                 </div>
