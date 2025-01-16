@@ -25,6 +25,9 @@ const Faqs = lazy(() => import("./components/Faqs"));
 
 function App() {
   const [animationCompleted, setAnimationCompleted] = useState(false);
+  const [activePAGE, SETactivePAGE] = useState("");
+
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,7 +43,7 @@ function App() {
         !animationCompleted &&
         <SvgAnimation />
       } */}
-      {animationCompleted && <Navbar />}
+      {animationCompleted && <Navbar activePAGE={activePAGE} SETactivePAGE={SETactivePAGE} />}
       <Audio className={`${animationCompleted === false ? "hidden" : ""}`} />
       <div
         className={`overflow-x-hidden overflow-y-hidden  relative transition-opacity duration-1000 ease-in-out`}
@@ -72,36 +75,36 @@ function App() {
               </div>
             }
           >
-            <div className="relative landAnim">
+            <div className="relative landAnim" onMouseEnter={() => SETactivePAGE("home")}>
               <HomePage />
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("about")}>
               <About />
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("tracks")}>
               <Track />
               <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("sponsors")}>
               <Sponsors />
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("prizes")}>
               <Prizes />
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("frontmen")}>
               <Frontmen />
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => SETactivePAGE("FAQs")}>
               <Faqs />
               <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#110202] to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>

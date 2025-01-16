@@ -1,30 +1,22 @@
 import { useEffect, useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ activePAGE, SETactivePAGE }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('');
+  // const [activeLink, setActiveLink] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
 
-    const handleHashChange = () => {
-      setActiveLink(window.location.hash);
-    };
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Set the initial active link
-    handleHashChange();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
+  console.log(activePAGE);
 
   return (
     <>
@@ -38,12 +30,13 @@ const Navbar = () => {
           {['home', 'about', 'tracks', 'sponsors', 'prizes', 'frontmen', 'FAQs'].map((link) => (
             <li key={link} className={`min-w-[60px] relative `}>
               <a
+                onClick={() => SETactivePAGE(`${link}`)}
                 href={`#${link}`}
-                className={`text-[21.5px] hover:text-white relative z-10 ${activeLink === `#${link}` ? 'text-white font-bold' : ''}`}
+                className={`text-[21.5px] hover:text-white relative z-10 ${`#${activePAGE}` === `#${link}` ? 'text-white font-bold' : ''}`}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
               </a>
-              {activeLink === `#${link}` && (
+              {`#${activePAGE}` === `#${link}` && (
                 <div className="absolute inset-0 bg-white opacity-20 rounded-full blur-lg"></div>
               )}
             </li>
