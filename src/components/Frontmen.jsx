@@ -46,7 +46,7 @@ const Frontmen = () => {
                         <div className="back absolute w-full h-full bg-gradient-to-b from-[#A90D2C] to-[#FFFFFF]">
                             <div className="flex justify-between items-center flex-col gap-4 p-6 h-full">
                                 <div className="flex flex-col items-center gap-2 justify-center">
-                                    <img src="/images/ARNAME.svg" alt="" />
+                                    <img src="/images/ART.svg" alt="" />
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Lead Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
@@ -125,10 +125,10 @@ const Frontmen = () => {
                                     <span className="font-normal mt-2 text-[20px] leading-[19.6px] font-[Poppins]">Co-Organiser</span>
                                 </div>
                                 <div className="links flex gap-4">
-                                    <a className='cursor-pointer'>
+                                    <a className='cursor-not-allowed'>
                                         <img src="/images/INSTA.svg" alt="" className="" />
                                     </a>
-                                    <a className='cursor-pointer'>
+                                    <a className='cursor-not-allowed'>
                                         <img src="/images/LINKEDIN.svg" alt="" className="" />
                                     </a>
                                 </div>
