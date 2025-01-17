@@ -22,6 +22,7 @@ const Prizes = lazy(() => import("./components/Priczes"));
 const Sponsors = lazy(() => import("./components/Sponsors"));
 const Track = lazy(() => import("./components/Track"));
 const Faqs = lazy(() => import("./components/Faqs"));
+const Form = lazy(() => import("./components/Forms"));
 
 function App() {
   const [animationCompleted, setAnimationCompleted] = useState(false);
@@ -106,6 +107,11 @@ function App() {
             </div>
             <div className="relative" onMouseEnter={() => SETactivePAGE("FAQs")}>
               <Faqs />
+              <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#110202] to-transparent pointer-events-none"></div>
+              <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+            </div>
+            <div className="relative" onMouseEnter={() => SETactivePAGE("")}>
+              <Form />
               <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#110202] to-transparent pointer-events-none"></div>
               <div className="absolute top-0 left-0 w-full h-14 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
             </div>
