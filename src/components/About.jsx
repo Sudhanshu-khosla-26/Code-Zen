@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-[url('/images/About.svg')]  h-[120vh]  w-screen  bg-cover bg-center bg-no-repeat m-0 px-0 py-8">
+    <div className="bg-[url('/images/About.svg')]  h-[120vh]  w-screen  bg-cover bg-center bg-no-repeat m-0 px-0 py-8 ">
       <div className="records flex items-center justify-center h-[161px] mt-[17vh] mx-auto w-[92vw]">
         {/* <img src="/images/Group.svg" alt="" /> */}
         <div className="flex justify-between items-center w-full space-x-4 px-8 pb-8 pt-2">

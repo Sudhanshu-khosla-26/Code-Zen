@@ -3,7 +3,7 @@ import { SectionWrapper } from "../hoc";
 const Footer = () => {
     return (
         <>
-            <div className="flex overflow-hidden items-center bg-[#110202] justify-center h-[120vh] gap-16 w-screen  m-0 px-0 py-0">
+            <div className="flex overflow-hidden items-center bg-[#110202] justify-center h-[120vh] gap-16 w-screen  m-0 px-0 py-0 ">
                 <div className="left max-h-full w-[50vw] flex flex-col">
                     <img className="relative left-4 top-[16vh] scale-x-[2] scale-y-[2.3]" src="/images/footermainimg.svg" alt="" />
                     <span className="relative top-[21vh] left-[3vw] font-[Poppins] font-bold text-[18px] leading-[23.94px] text-white " >

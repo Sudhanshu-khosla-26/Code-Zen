@@ -17,7 +17,7 @@ const HomePage = () => {
 
     return (
         <>
-            <div className=" bg-[url('/images/Website.svg')] h-[120vh]  w-screen  bg-cover bg-center bg-no-repeat m-0 px-0 py-8">
+            <div className=" bg-[url('/images/Website.svg')] h-[120vh]  w-screen  bg-cover bg-center bg-no-repeat m-0 px-0 py-8 ">
                 <div className="flex justify-center items-center flex-col mr-6 mt-12">
                     <div className=" logos flex justify-center items-center flex-col">
                         <img className='relative' src="/images/logo.svg" alt="" />
